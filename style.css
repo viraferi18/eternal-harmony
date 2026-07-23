@@ -715,4 +715,177 @@ footer h3{
     transform:translateY(-3px);
     opacity:.9;
 }
+/* ===========================
+   LOADER
+=========================== */
 
+#loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#faf8f5;
+
+z-index:999999;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+transition:1s;
+
+}
+
+.loader-content{
+
+text-align:center;
+
+}
+
+.loader-content h1{
+
+font-size:55px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#9b7b4f;
+
+}
+
+.loader-content span{
+
+color:#d6b36a;
+
+}
+
+.loader-content p{
+
+margin-top:10px;
+
+letter-spacing:4px;
+
+}
+
+.loader-ring{
+
+width:70px;
+
+height:70px;
+
+margin:30px auto;
+
+border:4px solid #ddd;
+
+border-top:4px solid #c7a15b;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ===========================
+PETALS
+=========================== */
+
+.petals{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:999;
+
+}
+
+.petals span{
+
+position:absolute;
+
+top:-50px;
+
+font-size:22px;
+
+animation:petal 12s linear infinite;
+
+opacity:.75;
+
+}
+
+.petals span:nth-child(1){left:5%;animation-delay:0s;}
+.petals span:nth-child(2){left:15%;animation-delay:2s;}
+.petals span:nth-child(3){left:25%;animation-delay:5s;}
+.petals span:nth-child(4){left:35%;animation-delay:1s;}
+.petals span:nth-child(5){left:45%;animation-delay:6s;}
+.petals span:nth-child(6){left:55%;animation-delay:3s;}
+.petals span:nth-child(7){left:65%;animation-delay:8s;}
+.petals span:nth-child(8){left:75%;animation-delay:4s;}
+.petals span:nth-child(9){left:85%;animation-delay:9s;}
+.petals span:nth-child(10){left:95%;animation-delay:7s;}
+
+@keyframes petal{
+
+0%{
+
+transform:translateY(-50px) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(720deg);
+
+}
+
+}
+
+/* ===========================
+FADE UP
+=========================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(70px);
+
+transition:1s;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
